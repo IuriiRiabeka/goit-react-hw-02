@@ -1,0 +1,42 @@
+.table-container {
+  width: 82%;
+  height: 80%;
+  margin: 32px auto;
+  border: 2px solid rgba(28, 27, 27);
+}
+.table-head {
+  background-color: rgb(28, 27, 27);
+  font-size: 2em;
+  width: 100%;
+
+  font-weight: 100;
+}
+table {
+  border-spacing: 0;
+}
+.table-head-line {
+  height: 2em;
+}
+.table-head-title {
+  width: 35%;
+
+  align-content: center;
+  border: 1px solid black;
+  color: aliceblue;
+  padding: auto;
+}
+.transaction-info {
+  width: 35%;
+  align-content: center;
+  border: 1px solid black;
+  font-size: 2em;
+  font-weight: 600;
+}
+.transaction-info-odd {
+  width: 35%;
+  align-content: center;
+  border: 1px solid black;
+  font-size: 2em;
+  font-weight: 600;
+  background-color: gray;
+}
