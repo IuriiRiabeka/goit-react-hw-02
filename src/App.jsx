@@ -1,26 +1,26 @@
-import { useState } from 'react'
+import { Children, useState } from 'react'
 import './App.css'
-import Profile from './components/profile/Profile';
+import Description from './components/Description/Description';
+import Options
+      from './components/Options/Options';
+import Feedback from './components/Feedback/Feedback';
 
-
-import userData from "./userData.json";
-import FriendList from './components/FriendList/FriendList';
-import friends from "./friends.json";
-import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
-import transactions from "./transactions.json";
+const DEFAULT_FEEDBACK_DATA = {
+	good: 0,
+	neutral: 0,
+	bad: 0,
+};
 
 const App = () => {
+	
+
+
   return (
     <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
-              <FriendList friends={friends} />
-              <TransactionHistory items={transactions} />
+              <Description></Description>
+			<Options></Options>
+			
+      
     </>
   );
 };
