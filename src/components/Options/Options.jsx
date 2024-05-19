@@ -6,39 +6,37 @@ import Feedback
 
 
 
-const Options = () => {
-  let [feedBackType, setFeedback] = useState({ good: 0, bad: 0, neutral: 0 })
-  const handleClickGood = () => {
-   
-    setFeedback({ ...feedBackType, good: feedBackType.good + 1 })
-  };
-  const handleClickNeutral = () => { setFeedback({ ...feedBackType, neutral: feedBackType.neutral + 1 }) };
-  const handleClickBad = () => {
-   
-    setFeedback({ ...feedBackType, bad: feedBackType.bad + 1 })
-    
-  };
-    const handleClickReset = () => {
-   
-      setFeedback({ ...feedBackType, good: 0, bad:0, neutral:0 })
-    
-  };
-
+const Options=({ info, clear, total })=> {
+  function handleClickGood() {
+    const feedBack = "good";
+    info(feedBack);
+  }
+  function handleClickNeutral() {
+    const feedBack = "neutral";
+    info(feedBack);
+  }
+  function handleClickBad() {
+    const feedBack = "bad";
+    info(feedBack);
+  }
+  function handleClickReset() {
+    clear();
+  }
 
   
   return (
     <div className="options-container">
       		
       <div className="options-buttons-board">
-        <button  className="options-button" onClick={handleClickGood}>Good</button>
-        <button  className="options-button" onClick={handleClickNeutral}>Neutral</button>
-        <button className="options-button" onClick={handleClickBad}>Bad</button>
-         <button className="options-button" onClick={handleClickReset}>Reset</button>
+        <button  className="options-button" value={"good"} onClick={handleClickGood}>Good</button>
+        <button  className="options-button" value={"neutral"} onClick={handleClickNeutral}>Neutral</button>
+        <button className="options-button" value={"bad"} onClick={handleClickBad}>Bad</button>
+       {total != 0 &&  (<button className="options-button" onClick={handleClickReset}>Reset</button>)}
         
        
       
       </div>
-      <Feedback feedback={feedBackType} ></Feedback>
+      
     </div>
   );
 
