@@ -66,13 +66,13 @@ const App = () => {
 
   return (
     <>
-              <Description></Description>
+              <Description/>
 			<Options
 			 info={updateFeedback}
         clear={resetState}
         total={totalFeedback}></Options>
-			  {totalFeedback == 0 && <Notification />}
-			{totalFeedback != 0 && (
+			  {totalFeedback === 0 && <Notification />}
+			{totalFeedback !== 0 && (
 				<Feedback feedback={feed}
 					total={totalFeedback}
 					positive={PositiveFeedback} ></Feedback>)}
